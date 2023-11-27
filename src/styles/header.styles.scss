@@ -1,0 +1,113 @@
+@import "@/styles/variables.scss";
+
+.introduction-container {
+  min-width: 860px;
+  max-width: 1280px;
+  height: 450px;
+  margin: 3rem 0 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  background-image: url("@/assets/images/asPhoto.png");
+  background-size: 500px;
+  background-position: 100% 20%;
+  background-repeat: no-repeat;
+
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 4px $orange;
+}
+
+h1 {
+  margin: 0;
+
+  &.text-name {
+    color: silver;
+    background-image: linear-gradient(
+      rgb(255, 255, 255) 45%,
+      rgb(207, 206, 206) 64%,
+      rgb(170, 170, 170) 80%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &.text-frontend {
+    color: $orange;
+  }
+}
+
+h2 {
+  margin: 0;
+}
+
+.rsss-container {
+  margin: 1rem 0;
+
+  & img {
+    margin: 0 0.5rem;
+    padding: 0.1rem;
+    border-radius: 8px;
+
+    box-shadow: 2px 2px 5px black;
+
+    background-image: linear-gradient(
+      rgb(255, 255, 255) 45%,
+      rgb(207, 206, 206) 64%,
+      rgb(170, 170, 170) 80%
+    );
+
+    &.linkedin-logo {
+      padding: 0.1rem 0.5rem 0.5rem 0.1rem;
+    }
+
+    &:hover {
+      background-image: linear-gradient(white 0%, white 100%);
+      box-shadow: inset 1px 1px 1px 1px $grey;
+      transform: scale(0.95);
+    }
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+}
+
+.techStack-container {
+  min-width: 800px;
+  max-width: 1280px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  .techStack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3rem;
+    width: 100px;
+    height: 200px;
+
+    .react-logo {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & img {
+    width: 80px;
+    height: 80px;
+  }
+
+  & p {
+    color: silver;
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+}

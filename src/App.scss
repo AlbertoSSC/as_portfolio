@@ -1,0 +1,136 @@
+@import "styles/variables.scss";
+$perfilImg: "@/assets/images/perfil.png";
+
+// body {
+//   background-image: url($perfilImg);
+//   background-repeat: no-repeat;
+// }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.navbar-container {
+  min-width: 800px;
+  max-width: 1280px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  margin-top: 1rem;
+
+  .logo-container {
+    cursor: pointer;
+  }
+
+  .navbar {
+    height: 50px;
+    margin: 0rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .navbar-item {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      margin: 0rem 1rem;
+      cursor: pointer;
+      letter-spacing: 0.08rem;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+
+.sticky-menu {
+  z-index: 1;
+
+  position: sticky;
+  top: 30px;
+  right: 200px;
+
+  display: flex;
+  justify-content: flex-end;
+
+  min-width: 960px;
+  max-width: 1280px;
+
+  opacity: 0;
+  transform: translateY(-200%);
+  transition: 1s ease;
+  animation: xbounce 1s ease;
+}
+
+@keyframes xbounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(-15px);
+  }
+  20% {
+    transform: translateX(15px);
+  }
+}
+
+.footer-toTop {
+  position: absolute;
+  top: 0%;
+  transform: translate(-80%, -80%);
+}
+
+.footer-container {
+  position: relative;
+  padding: 3rem 0 1rem;
+
+  background-color: $dark_blue;
+  width: 100%;
+
+  & p {
+    margin: 0 0 1rem;
+  }
+}
+
+.sections-title {
+  font-size: 120px;
+  letter-spacing: 50px;
+  font-weight: 900;
+
+  color: hsla(0, 0%, 100%, 0.031);
+
+  margin-left: 1.2rem;
+
+  text-align: center;
+
+  height: 80px;
+  line-height: 20px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.sections-hr {
+  border-top: 1px solid;
+  border-color: rgba(192, 192, 192, 0.03);
+}

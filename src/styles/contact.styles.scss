@@ -1,0 +1,112 @@
+.contact-section-container {
+  min-width: 800px;
+  max-width: 1280px;
+
+  margin: 0rem 0 5rem;
+}
+
+.contact-container {
+  & p {
+    font-size: larger;
+  }
+}
+
+.contact-linkedin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+  margin-top: 5rem;
+
+  &:active{
+    transform: scale(0.9);
+  }
+}
+
+.contact-linkedin-flip-images {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & img {
+    position: absolute;
+
+    margin-left: 3rem;
+
+    transition: 0.3s;
+    backface-visibility: hidden;
+
+    &:nth-child(1) {
+      border-radius: 8px;
+      border: 3px solid #1a1a1a;
+      background-image: linear-gradient(
+        rgb(255, 255, 255) 45%,
+        rgb(192, 192, 192) 64%,
+        rgb(170, 170, 170) 80%
+      );
+    }
+
+    &:nth-child(2) {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover {
+    & img:nth-child(2) {
+      transform: rotateY(0deg);
+    }
+    & img:nth-child(1) {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.contact-linkedin-link {
+  display: flex;
+  align-items: center;
+  transform: translateX(-20px);
+
+  background-image: linear-gradient(
+    rgb(255, 255, 255) 45%,
+    rgb(192, 192, 192) 64%,
+    rgb(170, 170, 170) 80%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:hover {
+    background-image: url("@/assets/images/color-linkedinLogo.png");
+    color: white;
+    -webkit-text-fill-color: inherit;
+
+    & img:nth-child(2) {
+      transform: rotateY(0deg);
+    }
+    & img:nth-child(1) {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem 5rem;
+
+  input {
+    border: none;
+    margin-bottom: 0.2rem;
+    padding: 1rem;
+  }
+
+  textarea {
+    padding: 1rem;
+    margin-bottom: 0.2rem;
+    min-height: 100px;
+    border: none;
+  }
+}

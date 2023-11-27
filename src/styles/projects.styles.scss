@@ -1,0 +1,61 @@
+@import "@/styles/variables.scss";
+
+.projects-section-container {
+  align-content: center;
+  margin: 2rem 0 5rem;
+}
+
+.projects-container {
+  & a {
+    border-radius: 8px;
+  }
+}
+
+.project-card-container {
+  margin: 3rem 6.5rem 5rem 5rem;
+  padding: 0.3rem;
+  transition: 0.5s ease;
+
+  &:hover {
+    box-shadow: 5px 5px 0 1.5px $orange;
+    border-radius: 8px;
+  }
+
+  .img-container {
+    border: 1px solid silver;
+    border-radius: 5px;
+
+    box-shadow: 0 0 0 5px $dark_grey;
+
+    max-width: 960px;
+    height: 200px;
+
+    background-color: $dark_grey;
+
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 1rem 0.5rem;
+    height: 50%;
+
+    & h1 {
+      line-height: normal;
+    }
+
+    & h2 {
+      content: "{ }";
+      color: $orange;
+    }
+  }
+}
