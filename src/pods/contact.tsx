@@ -37,10 +37,29 @@ export const ContactComponent: React.FC = () => {
     setDialogOpen(false);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     handleDialogOpen();
-    // lógica de envío
+
+    try {
+      const response = await fetch("../api/contact-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        handleDialogOpen();
+        console.log("Form Data:", formData);
+      } else {
+        console.error("Error submitting form");
+      }
+    } catch (error) {
+      console.error("Error submitting form", error);
+    }
+
     console.log("Form Data:", formData);
   };
 
