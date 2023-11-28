@@ -3,6 +3,7 @@ import "@/styles/contact.styles.scss";
 import React from "react";
 
 import { Element } from "react-scroll";
+import emailjs from "@emailjs/browser";
 
 // import arrowIcon from "@/assets/images/arrowIcon.png";
 import arrowIconOrange from "@/assets/images/arrowIcon_orange.png";
@@ -11,23 +12,22 @@ import colorLinkedinlogo from "@/assets/images/color-linkedinLogo.png";
 import { AlertDialogSlide } from "@/components/submit-dialog";
 
 export const ContactComponent: React.FC = () => {
-  const [formData, setFormData] = React.useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  // const [formData, setFormData] = React.useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // });
 
+  // const handleChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
   const [isDialogOpen, setDialogOpen] = React.useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
 
   const handleDialogOpen = () => {
     setDialogOpen(true);
@@ -37,30 +37,25 @@ export const ContactComponent: React.FC = () => {
     setDialogOpen(false);
   };
 
+  const refForm = React.useRef<HTMLFormElement | null>(null);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     handleDialogOpen();
 
-    try {
-      const response = await fetch("../api/contact-form", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    const serviceID = "service_yocwclr";
+    const templateId = "template_e6gr0rq";
 
-      if (response.ok) {
-        handleDialogOpen();
-        console.log("Form Data:", formData);
-      } else {
-        console.error("Error submitting form");
-      }
-    } catch (error) {
-      console.error("Error submitting form", error);
+    const apikey = "jG9b04QC3D3Gamq6_";
+
+    if (refForm.current) {
+      emailjs
+        .sendForm(serviceID, templateId, refForm.current, apikey)
+        .then((result) => console.log(result.text))
+        .catch((error) => console.error(error));
+    } else {
+      console.error("Form reference is null");
     }
-
-    console.log("Form Data:", formData);
   };
 
   return (
@@ -100,13 +95,18 @@ export const ContactComponent: React.FC = () => {
               />
             </div>
 
-            <form className="form-container" onSubmit={handleSubmit}>
+            <form
+              className="form-container"
+              ref={refForm}
+              action=""
+              onSubmit={handleSubmit}
+            >
               <input
                 placeholder="Name"
                 type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
+                name="username"
+                // value={formData.name}
+                // onChange={handleChange}
                 required
               />
 
@@ -114,19 +114,19 @@ export const ContactComponent: React.FC = () => {
                 placeholder="Email"
                 type="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
+                // value={formData.email}
+                // onChange={handleChange}
                 required
               />
 
               <textarea
                 placeholder="Message"
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
+                // value={formData.message}
+                // onChange={handleChange}
                 required
               />
-              <button type="submit">Submit</button>
+              <button type="submit">Send</button>
             </form>
           </div>
         </div>
