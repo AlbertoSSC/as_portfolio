@@ -19,7 +19,7 @@ export const ProjectsComponent: React.FC = () => {
 
             <div className="projects-container">
               <ListItemButton
-                href="https://gh-pages-lists.vercel.app/"
+                href="https://api-lists.vercel.app/"
                 sx={{
                   "&:hover": { backgroundColor: "#2f385d3a" },
                   "&:active": { color: "white" },
@@ -39,7 +39,7 @@ export const ProjectsComponent: React.FC = () => {
               </ListItemButton>
 
               <ListItemButton
-                href="https://gh-pages-manage-invoice.vercel.app/"
+                href="https://invoice-manager-eight.vercel.app/"
                 sx={{
                   "&:hover": { backgroundColor: "#2f385d3a" },
                   "&:active": { color: "white" },
@@ -59,7 +59,7 @@ export const ProjectsComponent: React.FC = () => {
               </ListItemButton>
 
               <ListItemButton
-                href="https://gh-pages-pet-shop.vercel.app/"
+                href="https://adoption-store.vercel.app//"
                 sx={{
                   "&:hover": { backgroundColor: "#2f385d3a" },
                   "&:active": { color: "white" },
