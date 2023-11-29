@@ -18,7 +18,7 @@
   flex-wrap: wrap;
   align-items: center;
 
-  margin-top: 5rem;
+  margin-top: 3rem;
 
   &:active{
     transform: scale(0.9);
@@ -110,3 +110,5 @@
     border: none;
   }
 }
+
+@import 'resposiveApp.scss'

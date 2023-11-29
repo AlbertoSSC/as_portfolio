@@ -3,10 +3,11 @@ import "@/styles/projects.styles.scss";
 import React from "react";
 import { Element } from "react-scroll";
 
+import { ListItemButton } from "@mui/material";
+
 import invoceImg from "@/assets/images/invoiceM.png";
 import adoptAPetImg from "@/assets/images/Adopt_a_pet.png";
 import apiImg from "@/assets/images/api.png";
-import { ListItemButton } from "@mui/material";
 
 export const ProjectsComponent: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ export const ProjectsComponent: React.FC = () => {
               <ListItemButton
                 href="https://api-lists.vercel.app/"
                 sx={{
+                  padding: 0,
                   "&:hover": { backgroundColor: "#2f385d3a" },
                   "&:active": { color: "white" },
                 }}
@@ -41,6 +43,7 @@ export const ProjectsComponent: React.FC = () => {
               <ListItemButton
                 href="https://invoice-manager-eight.vercel.app/"
                 sx={{
+                  padding: 0,
                   "&:hover": { backgroundColor: "#2f385d3a" },
                   "&:active": { color: "white" },
                 }}
@@ -61,6 +64,7 @@ export const ProjectsComponent: React.FC = () => {
               <ListItemButton
                 href="https://adoption-store.vercel.app//"
                 sx={{
+                  padding: 0,
                   "&:hover": { backgroundColor: "#2f385d3a" },
                   "&:active": { color: "white" },
                 }}

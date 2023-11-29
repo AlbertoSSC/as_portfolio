@@ -8,7 +8,7 @@ import reactLogo from "@/assets/images/react-logo.svg";
 export const TechStackComponent: React.FC = () => {
   return (
     <>
-      <div className="techStack-container" style={{ margin: "8rem 0" }}>
+      <div className="techStack-container">
         <div className="techStack-item">
           <img src={htmlLogo} alt="" />
           <p>HTML</p>

@@ -1,0 +1,191 @@
+@import "./variables.scss";
+
+@media (max-width: 1080px) {
+  body {
+    display: flex;
+    margin: 0;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  #root {
+    width: 100%;
+  }
+
+  .navbar-container {
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+    justify-content: space-between;
+
+    & .logo-container {
+      padding-right: 2rem;
+    }
+  }
+  .sticky-menu {
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+  }
+
+  .introduction-container {
+    min-width: 600px;
+    max-width: none;
+    justify-content: center;
+    background-position: 150% 20%;
+    margin: 0;
+
+    & .text-frontend {
+      width: 200px;
+      margin: 1rem 0;
+      line-height: 3rem;
+    }
+
+    & .rsss-container {
+      & a:nth-child(1) {
+        margin-right: 1rem;
+
+        img {
+          width: 60px;
+        }
+      }
+
+      & a:nth-child(2) {
+        img {
+          width: 54px;
+        }
+      }
+    }
+  }
+
+  .techStack-container {
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+    margin: 2rem 0;
+
+    & .techStack-item {
+      margin: 0 1.5rem;
+      height: auto;
+    }
+  }
+
+  .projects-section-container {
+    margin-bottom: 4rem;
+    width: 100%;
+  }
+
+  .projects-container {
+    & a {
+      &:nth-child(2n - 1) {
+        background-color: #2f385d3a;
+      }
+    }
+  }
+
+  .contact-linkedin {
+    margin-top: 2rem;
+  }
+
+  .contact-section-container {
+    width: 100%;
+    max-width: none;
+    min-width: auto;
+  }
+
+  .sections-title {
+    width: 100%;
+    margin: 0;
+
+    font-size: 90px;
+    letter-spacing: 21px;
+    font-weight: 900;
+
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  a {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-container {
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+    justify-content: center;
+
+    & .logo-container {
+      display: none;
+    }
+
+    & .navbar {
+      width: 100%;
+      justify-content: space-between;
+      margin: 0 2rem;
+    }
+  }
+  .introduction-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    max-width: none;
+    margin: 0;
+
+    background-size: 500px;
+    background-position: -40% 15%;
+  }
+
+  .techStack-container {
+    margin: 5rem 0 2rem;
+
+    & .techStack-item {
+      margin: 0.5rem 1.5rem;
+    }
+  }
+
+  .projects-section-container {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    & .project-card-container {
+      width: 100%;
+      margin: 1rem 0 2rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & .img-container {
+        width: 90%;
+        height: 150px;
+
+        margin-bottom: 2rem;
+      }
+
+      & .text-container {
+        & h1 {
+          line-height: 46px;
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  .contact-linkedin {
+    margin-top: 0rem;
+  }
+
+  .sections-title {
+    width: 100%;
+    margin: 0;
+
+    font-size: 50px;
+    letter-spacing: 10px;
+    font-weight: 900;
+
+    line-height: 10px;
+  }
+}

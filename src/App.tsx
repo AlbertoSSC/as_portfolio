@@ -1,4 +1,5 @@
 import "./App.scss";
+import "./styles/resposiveApp.scss";
 
 import {
   ContactComponent,
