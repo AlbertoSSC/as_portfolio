@@ -43,15 +43,16 @@
 
     & .rsss-container {
       & a:nth-child(1) {
-        margin-right: 1rem;
+        margin: 0rem;
 
         img {
-          width: 60px;
+          width: 64px;
         }
       }
 
       & a:nth-child(2) {
         img {
+          margin-bottom: 0.2rem;
           width: 54px;
         }
       }

@@ -47,10 +47,6 @@
 
     text-align: center;
 
-    & h2 {
-      letter-spacing: 1px;
-    }
-
     padding: 1rem 0.5rem;
     height: 50%;
 
@@ -59,7 +55,7 @@
     }
 
     & h2 {
-      content: "{ }";
+      letter-spacing: 1px;
       color: $orange;
     }
   }

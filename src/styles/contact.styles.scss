@@ -1,3 +1,5 @@
+@import "@/styles/variables.scss";
+
 .contact-section-container {
   min-width: 800px;
   max-width: 1280px;
@@ -20,7 +22,7 @@
 
   margin-top: 3rem;
 
-  &:active{
+  &:active {
     transform: scale(0.9);
   }
 }
@@ -42,12 +44,7 @@
 
     &:nth-child(1) {
       border-radius: 8px;
-      border: 3px solid #1a1a1a;
-      background-image: linear-gradient(
-        rgb(255, 255, 255) 45%,
-        rgb(192, 192, 192) 64%,
-        rgb(170, 170, 170) 80%
-      );
+      
     }
 
     &:nth-child(2) {
@@ -70,13 +67,14 @@
   align-items: center;
   transform: translateX(-20px);
 
-  background-image: linear-gradient(
-    rgb(255, 255, 255) 45%,
-    rgb(192, 192, 192) 64%,
-    rgb(170, 170, 170) 80%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: silver;
+  // background-image: linear-gradient(
+  //   rgb(255, 255, 255) 45%,
+  //   rgb(192, 192, 192) 64%,
+  //   rgb(170, 170, 170) 80%
+  // );
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
 
   &:hover {
     background-image: url("@/assets/images/color-linkedinLogo.png");
@@ -98,12 +96,14 @@
   margin: 1rem 2rem 5rem;
 
   input {
+    background-color: $dark_grey;
     border: none;
     margin-bottom: 0.2rem;
     padding: 1rem;
   }
 
   textarea {
+    background-color: $dark_grey;
     padding: 1rem;
     margin-bottom: 0.2rem;
     min-height: 100px;
@@ -111,4 +111,4 @@
   }
 }
 
-@import 'resposiveApp.scss'
+@import "resposiveApp.scss";

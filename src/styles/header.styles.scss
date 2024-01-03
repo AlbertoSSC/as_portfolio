@@ -25,13 +25,13 @@ h1 {
 
   &.text-name {
     color: silver;
-    background-image: linear-gradient(
-      rgb(255, 255, 255) 45%,
-      rgb(207, 206, 206) 64%,
-      rgb(170, 170, 170) 80%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background-image: linear-gradient(
+    //   rgb(255, 255, 255) 45%,
+    //   rgb(207, 206, 206) 64%,
+    //   rgb(170, 170, 170) 80%
+    // );
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
 
   &.text-frontend {
@@ -40,32 +40,24 @@ h1 {
 }
 
 h2 {
-  margin: 0;
+  margin: 0 0.3rem;
 }
 
 .rsss-container {
   margin: 1rem 0;
 
   & img {
-    margin: 0 0.5rem;
+    margin: 0 0.3rem;
     padding: 0.1rem;
     border-radius: 8px;
-
-    box-shadow: 2px 2px 5px black;
-
-    background-image: linear-gradient(
-      rgb(255, 255, 255) 45%,
-      rgb(207, 206, 206) 64%,
-      rgb(170, 170, 170) 80%
-    );
 
     &.linkedin-logo {
       padding: 0.1rem 0.5rem 0.5rem 0.1rem;
     }
 
     &:hover {
-      background-image: linear-gradient(white 0%, white 100%);
-      box-shadow: inset 1px 1px 1px 1px $grey;
+      background-color: $darker_grey;
+      box-shadow: inset 1px 1px 1px 1px $orange;
       transform: scale(0.95);
     }
     &:active {

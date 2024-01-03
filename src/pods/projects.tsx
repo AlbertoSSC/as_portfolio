@@ -20,7 +20,7 @@ export const ProjectsComponent: React.FC = () => {
 
             <div className="projects-container">
               <ListItemButton
-                href="https://api-lists.vercel.app/"
+                href="https://adoption-store.vercel.app//"
                 sx={{
                   padding: 0,
                   "&:hover": { backgroundColor: "#2f385d3a" },
@@ -31,11 +31,11 @@ export const ProjectsComponent: React.FC = () => {
               >
                 <div className="project-card-container">
                   <div className="text-container">
-                    <h1 className="text-name">API</h1>
+                    <h1 className="text-name">Adoption store</h1>
                     <h2>{"{ React · TypeScript }"} </h2>
                   </div>
                   <div className="img-container">
-                    <img src={apiImg} alt="" />
+                    <img src={adoptAPetImg} alt="" />
                   </div>
                 </div>
               </ListItemButton>
@@ -60,9 +60,9 @@ export const ProjectsComponent: React.FC = () => {
                   </div>
                 </div>
               </ListItemButton>
-
+              
               <ListItemButton
-                href="https://adoption-store.vercel.app//"
+                href="https://api-lists.vercel.app/"
                 sx={{
                   padding: 0,
                   "&:hover": { backgroundColor: "#2f385d3a" },
@@ -73,11 +73,11 @@ export const ProjectsComponent: React.FC = () => {
               >
                 <div className="project-card-container">
                   <div className="text-container">
-                    <h1 className="text-name">Adoption store</h1>
+                    <h1 className="text-name">API</h1>
                     <h2>{"{ React · TypeScript }"} </h2>
                   </div>
                   <div className="img-container">
-                    <img src={adoptAPetImg} alt="" />
+                    <img src={apiImg} alt="" />
                   </div>
                 </div>
               </ListItemButton>

@@ -45,6 +45,7 @@ h1 {
 }
 
 button {
+  color: silver;
   margin: 1rem;
   border-radius: 8px;
   border: 1px solid transparent;
@@ -54,28 +55,29 @@ button {
   font-family: inherit;
   background-color: $dark_blue;
   cursor: pointer;
-  transition:  0.2s ease;
+  transition: 0.2s ease;
 }
 button:hover {
   box-shadow: 4px 4px 0 2px $orange;
-    border-radius: 8px;
+  border-radius: 8px;
 }
-button:active{
+button:active {
   box-shadow: none;
   box-shadow: inset 1px 1px 1px 1px $grey;
-
 }
 
-
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: silver;
+    background-color: $darker_grey;
   }
-  a:hover {
-    color: #747bff;
+
+  h2 {
+    color: silver;
   }
+
   button {
-    background-color: #f9f9f9;
+    color: silver;
+    background-color: $dark_blue;
   }
 }

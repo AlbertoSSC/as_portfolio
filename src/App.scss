@@ -119,7 +119,11 @@ $perfilImg: "@/assets/images/perfil.png";
   letter-spacing: 50px;
   font-weight: 900;
 
-  color: hsla(0, 0%, 100%, 0.031);
+  color: hsla(0, 0%, 100%, 0.05);
+
+  @media (prefers-color-scheme: light) {
+    color: hsla(0, 0%, 100%, 0.08);
+  }
 
   margin-left: 1.2rem;
 
@@ -134,4 +138,8 @@ $perfilImg: "@/assets/images/perfil.png";
 .sections-hr {
   border-top: 1px solid;
   border-color: rgba(192, 192, 192, 0.03);
+
+  @media (prefers-color-scheme: light) {
+    border-color: rgba(192, 192, 192, 0.15);
+  }
 }
