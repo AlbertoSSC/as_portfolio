@@ -12,21 +12,6 @@ import colorLinkedinlogo from "@/assets/images/color-linkedinLogo.png";
 import { AlertDialogSlide } from "@/components/submit-dialog";
 
 export const ContactComponent: React.FC = () => {
-  // const [formData, setFormData] = React.useState({
-  //   name: "",
-  //   email: "",
-  //   message: "",
-  // });
-
-  // const handleChange = (
-  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  // ) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     [name]: value,
-  //   }));
-  // };
   const [isDialogOpen, setDialogOpen] = React.useState(false);
 
   const handleDialogOpen = () => {
@@ -80,7 +65,7 @@ export const ContactComponent: React.FC = () => {
               >
                 Linked
                 <div className="contact-linkedin-flip-images">
-                  <img src={linkedinlogo} width={38} alt="linkedin logo" />
+                  <img src={linkedinlogo} width={38} alt="linkedin textlogo" />
                   <img src={colorLinkedinlogo} width={68} alt="linkedin logo" />
                 </div>
               </a>
@@ -91,7 +76,7 @@ export const ContactComponent: React.FC = () => {
                 src={arrowIconOrange}
                 width={36}
                 style={{ rotate: "90deg" }}
-                alt="down arrow image"
+                alt="down arrow"
               />
             </div>
 
@@ -104,26 +89,23 @@ export const ContactComponent: React.FC = () => {
               <input
                 placeholder="Name"
                 type="text"
+                title="username"
                 name="username"
-                // value={formData.name}
-                // onChange={handleChange}
                 required
               />
 
               <input
                 placeholder="Email"
                 type="email"
+                title="email"
                 name="email"
-                // value={formData.email}
-                // onChange={handleChange}
                 required
               />
 
               <textarea
                 placeholder="Message"
                 name="message"
-                // value={formData.message}
-                // onChange={handleChange}
+                title="message"
                 required
               />
               <button type="submit">Send</button>

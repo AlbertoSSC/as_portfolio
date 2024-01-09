@@ -21,7 +21,7 @@ export const HeaderComponent: React.FC = () => {
               target="_blank"
               rel="noopener"
             >
-              <img src={githublogo} alt="" width={42} />
+              <img src={githublogo} alt="github logo" width={42} />
             </a>
             <a
               href="https://linkedin.com/in/albertos2c"
@@ -31,7 +31,7 @@ export const HeaderComponent: React.FC = () => {
               <img
                 className="linkedin-logo"
                 src={linkedinlogo}
-                alt=""
+                alt="linkedin logo"
                 width={36}
               />
             </a>

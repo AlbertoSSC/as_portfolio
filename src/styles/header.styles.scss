@@ -11,7 +11,7 @@
   align-items: flex-start;
   justify-content: center;
 
-  background-image: url("@/assets/images/asPhoto.png");
+  background-image: url("@/assets/images/asPhoto.webp");
   background-size: 500px;
   background-position: 100% 20%;
   background-repeat: no-repeat;
@@ -88,14 +88,14 @@ h2 {
     height: 200px;
 
     .react-logo {
-      width: 100%;
+      width: 85%;
       object-fit: cover;
     }
   }
 
   & img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
 
   & p {

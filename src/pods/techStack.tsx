@@ -10,19 +10,19 @@ export const TechStackComponent: React.FC = () => {
     <>
       <div className="techStack-container">
         <div className="techStack-item">
-          <img src={htmlLogo} alt="" />
+          <img src={htmlLogo} alt="logo HTML" />
           <p>HTML</p>
         </div>
         <div className="techStack-item">
-          <img src={cssLogo} alt="" />
+          <img src={cssLogo} alt="logo CSS" />
           <p>CSS</p>
         </div>
         <div className="techStack-item">
-          <img src={jsLogo} alt="" />
+          <img src={jsLogo} alt="logo javaScript" />
           <p>JavaScript</p>
         </div>
         <div className="techStack-item">
-          <img className="react-logo" src={reactLogo} alt="" />
+          <img className="react-logo" src={reactLogo} alt="logo React" />
           <p>React</p>
         </div>
       </div>

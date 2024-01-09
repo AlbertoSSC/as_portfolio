@@ -1,6 +1,12 @@
 import React from "react";
 
-import asLogo from "@/assets/images/ASSC_Imagotipo_Grey.png";
+// import asLogo from "@/assets/images/ASSC_Imagotipo_Grey.png";
+
+// function getCurrentYear() {
+//   const date = new Date();
+//   const year = date.getFullYear();
+//   return year;
+// }
 
 export const FooterLayout: React.FC = () => {
   return (
@@ -14,13 +20,14 @@ export const FooterLayout: React.FC = () => {
         >
           ▲
         </button>
-        <div>
+        {/* <div>
           <img src={asLogo} width="64" alt="alberto logo" />
           <p>
             Developed with React
-            <br />· 2023 ·
+            <br />
+            {getCurrentYear()}
           </p>
-        </div>
+        </div> */}
       </div>
     </>
   );
